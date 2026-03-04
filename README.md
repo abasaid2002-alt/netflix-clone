@@ -1,16 +1,36 @@
-# React + Vite
+# Netflix Clone (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Netflix-style frontend clone built with React, Vite and Bootstrap. The app fetches movie posters from the OMDb API and displays them in responsive galleries.
 
-Currently, two official plugins are available:
+## Technologies
+- React
+- Vite
+- JavaScript
+- Bootstrap
+- Bootstrap Icons
+- OMDb API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Main features
+- Netflix-inspired dark UI layout
+- Reusable components (Navbar, Gallery, MovieCard, Footer)
+- Multiple movie sections:
+  - Trending Now
+  - Watch it Again
+  - New Releases
+- API fetch from OMDb (`s=` search query)
+- Loading spinner while fetching data
+- Responsive movie grid
+- Hover effect on movie cards
 
-## React Compiler
+## Project structure
+- `src/components/Gallery.jsx` → fetches movie lists from OMDb
+- `src/components/MovieCard.jsx` → renders poster cards
+- `src/omdbConfig.js` → OMDb base URL and API key config
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Project goal
+Project created during the Front-End path at Epicode to practice React components, props, API calls and responsive UI layout with Bootstrap.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run locally
+```bash
+npm install
+npm run dev
